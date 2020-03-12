@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker-安装elasticsearch | BAT-从想去到放弃</title>
+    <meta name="description" content="记录学习的点点滴滴，共同进步">
+    <link rel="icon" href="/my.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.1150044b.css" as="style"><link rel="preload" href="/assets/js/app.f3fa66b2.js" as="script"><link rel="preload" href="/assets/js/15.33c10f34.js" as="script"><link rel="prefetch" href="/assets/js/10.519c0073.js"><link rel="prefetch" href="/assets/js/11.ff8d7b4e.js"><link rel="prefetch" href="/assets/js/12.a2a25296.js"><link rel="prefetch" href="/assets/js/13.3b92aee0.js"><link rel="prefetch" href="/assets/js/14.9c570859.js"><link rel="prefetch" href="/assets/js/16.91fc2b00.js"><link rel="prefetch" href="/assets/js/17.d253833c.js"><link rel="prefetch" href="/assets/js/18.15c12575.js"><link rel="prefetch" href="/assets/js/19.76367b36.js"><link rel="prefetch" href="/assets/js/2.64267ebb.js"><link rel="prefetch" href="/assets/js/20.e02d1444.js"><link rel="prefetch" href="/assets/js/21.4808c524.js"><link rel="prefetch" href="/assets/js/22.ff9655a5.js"><link rel="prefetch" href="/assets/js/23.c86a820c.js"><link rel="prefetch" href="/assets/js/24.607cbd64.js"><link rel="prefetch" href="/assets/js/25.f54cde96.js"><link rel="prefetch" href="/assets/js/26.dcd2b7a7.js"><link rel="prefetch" href="/assets/js/27.d4a6d223.js"><link rel="prefetch" href="/assets/js/3.45bdd644.js"><link rel="prefetch" href="/assets/js/4.9dcf3f7d.js"><link rel="prefetch" href="/assets/js/5.12877c06.js"><link rel="prefetch" href="/assets/js/6.31f57a6c.js"><link rel="prefetch" href="/assets/js/7.adb3f0e1.js"><link rel="prefetch" href="/assets/js/8.da6b6ccb.js"><link rel="prefetch" href="/assets/js/9.ee80b304.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1150044b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BAT-从想去到放弃</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/basic/collections/" class="nav-link">集合</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java并发编程</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/concurrent/thread/" class="nav-link">多线程</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/designpattern/create/" class="nav-link">创建型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">结构型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/behavior.html" class="nav-link">行为型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">MVC设计模式</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分布式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese.html" class="nav-link">分布式缓存</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式消息队列</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式锁</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式搜索引擎</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">软件安装</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/soft/docker/" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/soft/gitlab/" class="nav-link">gitlab</a></li><li class="dropdown-item"><!----> <a href="/soft/nexus/" class="nav-link">nexus</a></li><li class="dropdown-item"><!----> <a href="/soft/mysql/" class="nav-link">mysql</a></li><li class="dropdown-item"><!----> <a href="/soft/zk-kafka/" class="nav-link">kafka</a></li><li class="dropdown-item"><!----> <a href="/soft/rabbitmq/" class="nav-link">rabbitmq</a></li><li class="dropdown-item"><!----> <a href="/soft/elasitcsearch/" class="nav-link router-link-exact-active router-link-active">elasitcsearch</a></li><li class="dropdown-item"><!----> <a href="/soft/registry/" class="nav-link">registry</a></li><li class="dropdown-item"><!----> <a href="/soft/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/soft/jenkins/" class="nav-link">jenkins</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/basic/collections/" class="nav-link">集合</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java并发编程</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/concurrent/thread/" class="nav-link">多线程</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/designpattern/create/" class="nav-link">创建型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">结构型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/behavior.html" class="nav-link">行为型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">MVC设计模式</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分布式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese.html" class="nav-link">分布式缓存</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式消息队列</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式锁</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式搜索引擎</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">软件安装</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/soft/docker/" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/soft/gitlab/" class="nav-link">gitlab</a></li><li class="dropdown-item"><!----> <a href="/soft/nexus/" class="nav-link">nexus</a></li><li class="dropdown-item"><!----> <a href="/soft/mysql/" class="nav-link">mysql</a></li><li class="dropdown-item"><!----> <a href="/soft/zk-kafka/" class="nav-link">kafka</a></li><li class="dropdown-item"><!----> <a href="/soft/rabbitmq/" class="nav-link">rabbitmq</a></li><li class="dropdown-item"><!----> <a href="/soft/elasitcsearch/" class="nav-link router-link-exact-active router-link-active">elasitcsearch</a></li><li class="dropdown-item"><!----> <a href="/soft/registry/" class="nav-link">registry</a></li><li class="dropdown-item"><!----> <a href="/soft/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/soft/jenkins/" class="nav-link">jenkins</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/soft/elasitcsearch/" class="active sidebar-link">Docker-安装elasticsearch</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#一、搭建单节点es" class="sidebar-link">一、搭建单节点es</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#_1、安装es" class="sidebar-link">1、安装es</a></li><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#_2、安装es-head" class="sidebar-link">2、安装es-head</a></li></ul></li><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#二、集群安装" class="sidebar-link">二、集群安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#_1、单机集群安装" class="sidebar-link">1、单机集群安装</a></li><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#_2、多机集群安装" class="sidebar-link">2、多机集群安装</a></li></ul></li><li class="sidebar-sub-header"><a href="/soft/elasitcsearch/#三、脑裂问题的预防" class="sidebar-link">三、脑裂问题的预防</a></li></ul></li></ul> </div> <div class="page"> <div class="content"><h1 id="docker-安装elasticsearch"><a href="#docker-安装elasticsearch" aria-hidden="true" class="header-anchor">#</a> Docker-安装elasticsearch</h1> <p>Es 官方网址</p> <p>https://www.elastic.co/guide/en/elasticsearch/reference/5.6/docker.html</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'2'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">elasticsearch1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> docker.elastic.co/elasticsearch/elasticsearch<span class="token punctuation">:</span>5.6.12
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> elasticsearch1
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> cluster.name=docker<span class="token punctuation">-</span>cluster
+      <span class="token punctuation">-</span> bootstrap.memory_lock=true
+      <span class="token punctuation">-</span> <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span>
+    <span class="token key atrule">ulimits</span><span class="token punctuation">:</span>
+      <span class="token key atrule">memlock</span><span class="token punctuation">:</span>
+        <span class="token key atrule">soft</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+        <span class="token key atrule">hard</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+    <span class="token key atrule">mem_limit</span><span class="token punctuation">:</span> 1g
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> esdata1<span class="token punctuation">:</span>/usr/share/elasticsearch/data
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9200<span class="token punctuation">:</span><span class="token number">9200</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> esnet
+  <span class="token key atrule">elasticsearch2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> docker.elastic.co/elasticsearch/elasticsearch<span class="token punctuation">:</span>5.6.12
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> cluster.name=docker<span class="token punctuation">-</span>cluster
+      <span class="token punctuation">-</span> bootstrap.memory_lock=true
+      <span class="token punctuation">-</span> <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;discovery.zen.ping.unicast.hosts=elasticsearch1&quot;</span>
+    <span class="token key atrule">ulimits</span><span class="token punctuation">:</span>
+      <span class="token key atrule">memlock</span><span class="token punctuation">:</span>
+        <span class="token key atrule">soft</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+        <span class="token key atrule">hard</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+    <span class="token key atrule">mem_limit</span><span class="token punctuation">:</span> 1g
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> esdata2<span class="token punctuation">:</span>/usr/share/elasticsearch/data
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> esnet
+
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">esdata1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> local
+  <span class="token key atrule">esdata2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> local
+
+<span class="token key atrule">networks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">esnet</span><span class="token punctuation">:</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><p>版本适配</p> <p>https://github.com/spring-projects/spring-data-elasticsearch</p> <h2 id="一、搭建单节点es"><a href="#一、搭建单节点es" aria-hidden="true" class="header-anchor">#</a> 一、搭建单节点es</h2> <h3 id="_1、安装es"><a href="#_1、安装es" aria-hidden="true" class="header-anchor">#</a> 1、安装es</h3> <p>以springboot2.0.4为例，对应的spring-data-elasticsearch 版本为3.0.9</p> <p>对应的elasticsearch的版本为5.6.10</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>cd /usr/local
+
+mkdir -p es
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><code>vim elasticsearch.yml</code></p> <p><code>elasticsearch.yml</code>内容如下</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">http.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">transport.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9200</span>
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+<span class="token comment"># Uncomment the following lines for a production cluster deployment</span>
+<span class="token comment">#transport.host: 0.0.0.0</span>
+<span class="token comment">#discovery.zen.minimum_master_nodes: 1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><code>vim docker-compose.yml</code></p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'2'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> elasticsearch<span class="token punctuation">:</span>5.6.10
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> elasticsearch
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> TZ='Asia/Shanghai'
+      <span class="token punctuation">-</span> cluster.name=docker<span class="token punctuation">-</span>cluster
+      <span class="token punctuation">-</span> bootstrap.memory_lock=true
+      <span class="token punctuation">-</span> <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span>
+    <span class="token key atrule">ulimits</span><span class="token punctuation">:</span>
+      <span class="token key atrule">memlock</span><span class="token punctuation">:</span>
+        <span class="token key atrule">soft</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+        <span class="token key atrule">hard</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+    <span class="token key atrule">mem_limit</span><span class="token punctuation">:</span> 1g
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> esdata1<span class="token punctuation">:</span>/usr/share/elasticsearch/data
+      <span class="token punctuation">-</span> $PWD/elasticsearch.yml<span class="token punctuation">:</span>/usr/share/elasticsearch/config/elasticsearch.yml
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9200<span class="token punctuation">:</span><span class="token number">9200</span>
+      <span class="token punctuation">-</span> 9300<span class="token punctuation">:</span><span class="token number">9300</span>
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">esdata1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> local
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p><em>报错处理</em></p> <p><code>[1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</code></p> <p>处理方法</p> <p>修改<code>etc/sysctl.conf</code></p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>vim /etc/sysctl.conf
+
+最末尾加入：vm.max_map_count=262144
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>或者</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>echo &quot;vm.max_map_count=262144&quot; &gt;&gt; /etc/sysctl.conf
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>查看是否生效</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>sysctl -p
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_2、安装es-head"><a href="#_2、安装es-head" aria-hidden="true" class="header-anchor">#</a> 2、安装es-head</h3> <h4 id="gruntfile-js"><a href="#gruntfile-js" aria-hidden="true" class="header-anchor">#</a> Gruntfile.js</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>vim Gruntfile.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code>connect<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                server<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        <span class="token comment">/* 默认监控：127.0.0.1,修改为：0.0.0.0 */</span>
+                        hostname<span class="token punctuation">:</span> <span class="token string">'0.0.0.0'</span><span class="token punctuation">,</span>
+                        port<span class="token punctuation">:</span> <span class="token number">9100</span><span class="token punctuation">,</span>
+                        base<span class="token punctuation">:</span> <span class="token string">'.'</span><span class="token punctuation">,</span>
+                        keepalive<span class="token punctuation">:</span> <span class="token boolean">true</span>
+                    <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="app-js"><a href="#app-js" aria-hidden="true" class="header-anchor">#</a> app.js</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>vim app.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">/* 修改localhost为elasticsearch集群地址，Docker部署中，一般是elasticsearch宿主机地址 */</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>base_uri <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>base_uri <span class="token operator">||</span> <span class="token keyword">this</span><span class="token punctuation">.</span>prefs<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&quot;app-base_uri&quot;</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">&quot;http://localhost:9200&quot;</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-text"><code>vim docker-compose.yml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'2.0'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+    <span class="token key atrule">elasticsearch-head</span><span class="token punctuation">:</span>
+    	<span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> mobz/elasticsearch<span class="token punctuation">-</span>head<span class="token punctuation">:</span><span class="token number">5</span>
+        <span class="token key atrule">container_name</span><span class="token punctuation">:</span> es<span class="token punctuation">-</span>head
+        <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+            /* 修改挂载位置 */
+           <span class="token punctuation">-</span> $PWD/Gruntfile.js<span class="token punctuation">:</span>/usr/src/app/Gruntfile.js
+           <span class="token punctuation">-</span> $PWD/app.js<span class="token punctuation">:</span>/usr/src/app/_site/app.js        
+        <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+           <span class="token punctuation">-</span> <span class="token string">&quot;9100:9100&quot;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h4 id="ik分词器"><a href="#ik分词器" aria-hidden="true" class="header-anchor">#</a> ik分词器</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>docker exec -it elasticsearch bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>cd plugins/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v5.6.10/elasticsearch-analysis-ik-5.6.10.zip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-text"><code>unzip elasticsearch-analysis-ik-5.6.10.zip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-text"><code>rm elasticsearch-analysis-ik-5.6.10.zip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="安装-elasticsearch-kopf-插件"><a href="#安装-elasticsearch-kopf-插件" aria-hidden="true" class="header-anchor">#</a> 安装  elasticsearch-kopf 插件</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>安装ik分词器</p> <ol start="3"><li>安装ik 中文分词插件 进入容器 $ sudo</li> <li>docker exec -it imageId /bin/bash $</li> <li>cd plugins $ wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v5.6.4/elasticsearch-analysis-ik-5.6.4.zip</li> <li>$ unzip elasticsearch-analysis-ik-5.6.4.zip</li> <li>$ rm elasticsearch-analysis-ik-5.6.4.zip</li> <li>利用 ./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v5.6.4/elasticsearch-analysis-ik-5.6.4.zip  会出问题： java.io.FileNotFoundException: /usr/share/elasticsearch/config/analysis-ik/IKAnalyze</li> <li>--------------------- 本文来自 mangues 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/u012915455/article/details/78952068?utm_source=copy</li></ol> <h2 id="二、集群安装"><a href="#二、集群安装" aria-hidden="true" class="header-anchor">#</a> 二、集群安装</h2> <h3 id="_1、单机集群安装"><a href="#_1、单机集群安装" aria-hidden="true" class="header-anchor">#</a> 1、单机集群安装</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>vim es1.yml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment">#集群名称 所有节点要相同</span>
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> <span class="token string">&quot;es-master&quot;</span>
+<span class="token comment">#本节点名称</span>
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> master
+<span class="token comment">#作为master节点</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#是否存储数据</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment"># head插件设置</span>
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+<span class="token comment">#设置可以访问的ip 这里全部设置通过</span>
+<span class="token key atrule">network.bind_host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token comment">#设置节点 访问的地址 设置master所在机器的ip</span>
+<span class="token key atrule">network.publish_host</span><span class="token punctuation">:</span> 192.168.52.140 
+
+<span class="token key atrule">discovery.zen.ping.unicast.hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;192.168.52.140:9300&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;192.168.52.140:9301&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;192.168.52.140:9302&quot;</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>vim es2.yml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> <span class="token string">&quot;es-master&quot;</span>
+<span class="token comment">#子节点名称</span>
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> node
+<span class="token comment">#不作为master节点</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+
+<span class="token key atrule">network.bind_host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">network.publish_host</span><span class="token punctuation">:</span> 192.168.52.140
+<span class="token comment">#设置master地址</span>
+<span class="token key atrule">discovery.zen.ping.unicast.hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>192.168.52.40<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><div class="language-es3.yml line-numbers-mode"><pre class="language-text"><code>vim es3.yml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> <span class="token string">&quot;es-master&quot;</span>
+<span class="token comment">#子节点名称</span>
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> node
+<span class="token comment">#不作为master节点</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+
+<span class="token key atrule">network.bind_host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">network.publish_host</span><span class="token punctuation">:</span> 192.168.52.140
+<span class="token comment">#设置master地址</span>
+<span class="token key atrule">discovery.zen.ping.unicast.hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>192.168.52.140<span class="token punctuation">]</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-text"><code>vim docker-compose.yml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'2.0'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">es-master</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> elasticsearch<span class="token punctuation">:</span>5.6.12
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> es<span class="token punctuation">-</span>master
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./es1.yml<span class="token punctuation">:</span>/usr/share/elasticsearch/config/elasticsearch.yml
+      <span class="token punctuation">-</span> ./data1<span class="token punctuation">:</span>/usr/share/elasticsearch/data
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ES_CLUSTERNAME=es<span class="token punctuation">-</span>master
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9200<span class="token punctuation">:</span><span class="token number">9200</span>
+      <span class="token punctuation">-</span> 9300<span class="token punctuation">:</span><span class="token number">9300</span>
+  <span class="token key atrule">es-2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> elasticsearch<span class="token punctuation">:</span>5.6.12
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> es<span class="token punctuation">-</span><span class="token number">2</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./es2.yml<span class="token punctuation">:</span>/usr/share/elasticsearch/config/elasticsearch.yml
+      <span class="token punctuation">-</span> ./data2<span class="token punctuation">:</span>/usr/share/elasticsearch/data
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ES_CLUSTERNAME=es<span class="token punctuation">-</span>master
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9201<span class="token punctuation">:</span><span class="token number">9200</span>
+      <span class="token punctuation">-</span> 9301<span class="token punctuation">:</span><span class="token number">9300</span>
+    <span class="token key atrule">links</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> es<span class="token punctuation">-</span>master<span class="token punctuation">:</span>elasticsearch 
+  <span class="token key atrule">es-3</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> elasticsearch<span class="token punctuation">:</span>5.6.12
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> es<span class="token punctuation">-</span><span class="token number">3</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./es3.yml<span class="token punctuation">:</span>/usr/share/elasticsearch/config/elasticsearch.yml
+      <span class="token punctuation">-</span> ./data3<span class="token punctuation">:</span>/usr/share/elasticsearch/data
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ES_CLUSTERNAME=es<span class="token punctuation">-</span>master
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9202<span class="token punctuation">:</span><span class="token number">9200</span>
+      <span class="token punctuation">-</span> 9302<span class="token punctuation">:</span><span class="token number">9300</span>
+    <span class="token key atrule">links</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> es<span class="token punctuation">-</span>master<span class="token punctuation">:</span>elasticsearch
+  <span class="token key atrule">elasticsearch-head</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mobz/elasticsearch<span class="token punctuation">-</span>head<span class="token punctuation">:</span><span class="token number">5</span>
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> head
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./Gruntfile.js<span class="token punctuation">:</span>/usr/src/app/Gruntfile.js
+      <span class="token punctuation">-</span> ./app.js<span class="token punctuation">:</span>/usr/src/app/_site/app.js        
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9100<span class="token punctuation">:</span><span class="token number">9100          </span>
+    <span class="token key atrule">links</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> es<span class="token punctuation">-</span>master<span class="token punctuation">:</span>elasticsearch
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><h3 id="_2、多机集群安装"><a href="#_2、多机集群安装" aria-hidden="true" class="header-anchor">#</a> 2、多机集群安装</h3> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment"># ================= Elasticsearch Configuration ===================</span>
+ 
+<span class="token comment"># #配置es的集群名称, es会自动发现在同一网段下的es,如果在同一网段下有多个集群,就可以用这个属性来区分不同的集群｡</span>
+ 
+ <span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> winy<span class="token punctuation">-</span>es<span class="token punctuation">-</span>cluster
+ 
+<span class="token comment"># #节点名称</span>
+ 
+ <span class="token key atrule">node.name</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span><span class="token number">002</span>
+ 
+<span class="token comment"># #指定该节点是否有资格被选举成为node</span>
+ 
+ <span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+ 
+<span class="token comment"># #指定该节点是否存储索引数据,默认为true｡</span>
+ 
+ <span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+ 
+<span class="token comment"># #设置绑定的ip地址还有其它节点和该节点交互的ip地址,本机ip</span>
+ 
+ <span class="token key atrule">network.host</span><span class="token punctuation">:</span> 192.168.95.129
+ 
+<span class="token comment"># #指定http端口,你使用head､kopf等相关插件使用的端口</span>
+ 
+ <span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9200</span>
+ 
+<span class="token comment"># #设置节点间交互的tcp端口,默认是9300｡</span>
+ 
+ <span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9300</span>
+ 
+<span class="token comment">#设置集群中master节点的初始列表,可以通过这些节点来自动发现新加入集群的节点｡</span>
+ 
+ <span class="token key atrule">discovery.zen.ping.unicast.hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;192.168.95.129:9300&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;192.168.95.130:9300&quot;</span><span class="token punctuation">]</span>
+ 
+<span class="token comment">#如果要使用head,那么需要增加新的参数,使head插件可以访问es</span>
+ 
+ <span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+ 
+ <span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+ 
+ <span class="token comment">#防止脑裂，告诉cluster集群master节点数量，设置为（master/2）+1</span>
+ 
+ discovery.zen.minimum_master_nodes=2
+ 
+ <span class="token comment">#节点之间通信超时等待时长</span>
+ discovery.zen.ping.timeout=10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><h2 id="三、脑裂问题的预防"><a href="#三、脑裂问题的预防" aria-hidden="true" class="header-anchor">#</a> 三、脑裂问题的预防</h2> <p>https://blog.csdn.net/WuyZhen_CSDN/article/details/73744233</p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.f3fa66b2.js" defer></script><script src="/assets/js/15.33c10f34.js" defer></script>
+  </body>
+</html>

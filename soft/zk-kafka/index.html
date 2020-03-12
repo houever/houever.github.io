@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现目标 | BAT-从想去到放弃</title>
+    <meta name="description" content="记录学习的点点滴滴，共同进步">
+    <link rel="icon" href="/my.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.1150044b.css" as="style"><link rel="preload" href="/assets/js/app.f3fa66b2.js" as="script"><link rel="preload" href="/assets/js/24.607cbd64.js" as="script"><link rel="prefetch" href="/assets/js/10.519c0073.js"><link rel="prefetch" href="/assets/js/11.ff8d7b4e.js"><link rel="prefetch" href="/assets/js/12.a2a25296.js"><link rel="prefetch" href="/assets/js/13.3b92aee0.js"><link rel="prefetch" href="/assets/js/14.9c570859.js"><link rel="prefetch" href="/assets/js/15.33c10f34.js"><link rel="prefetch" href="/assets/js/16.91fc2b00.js"><link rel="prefetch" href="/assets/js/17.d253833c.js"><link rel="prefetch" href="/assets/js/18.15c12575.js"><link rel="prefetch" href="/assets/js/19.76367b36.js"><link rel="prefetch" href="/assets/js/2.64267ebb.js"><link rel="prefetch" href="/assets/js/20.e02d1444.js"><link rel="prefetch" href="/assets/js/21.4808c524.js"><link rel="prefetch" href="/assets/js/22.ff9655a5.js"><link rel="prefetch" href="/assets/js/23.c86a820c.js"><link rel="prefetch" href="/assets/js/25.f54cde96.js"><link rel="prefetch" href="/assets/js/26.dcd2b7a7.js"><link rel="prefetch" href="/assets/js/27.d4a6d223.js"><link rel="prefetch" href="/assets/js/3.45bdd644.js"><link rel="prefetch" href="/assets/js/4.9dcf3f7d.js"><link rel="prefetch" href="/assets/js/5.12877c06.js"><link rel="prefetch" href="/assets/js/6.31f57a6c.js"><link rel="prefetch" href="/assets/js/7.adb3f0e1.js"><link rel="prefetch" href="/assets/js/8.da6b6ccb.js"><link rel="prefetch" href="/assets/js/9.ee80b304.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1150044b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BAT-从想去到放弃</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/basic/collections/" class="nav-link">集合</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java并发编程</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/concurrent/thread/" class="nav-link">多线程</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/designpattern/create/" class="nav-link">创建型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">结构型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/behavior.html" class="nav-link">行为型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">MVC设计模式</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分布式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese.html" class="nav-link">分布式缓存</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式消息队列</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式锁</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式搜索引擎</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">软件安装</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/soft/docker/" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/soft/gitlab/" class="nav-link">gitlab</a></li><li class="dropdown-item"><!----> <a href="/soft/nexus/" class="nav-link">nexus</a></li><li class="dropdown-item"><!----> <a href="/soft/mysql/" class="nav-link">mysql</a></li><li class="dropdown-item"><!----> <a href="/soft/zk-kafka/" class="nav-link router-link-exact-active router-link-active">kafka</a></li><li class="dropdown-item"><!----> <a href="/soft/rabbitmq/" class="nav-link">rabbitmq</a></li><li class="dropdown-item"><!----> <a href="/soft/elasitcsearch/" class="nav-link">elasitcsearch</a></li><li class="dropdown-item"><!----> <a href="/soft/registry/" class="nav-link">registry</a></li><li class="dropdown-item"><!----> <a href="/soft/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/soft/jenkins/" class="nav-link">jenkins</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/basic/collections/" class="nav-link">集合</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java并发编程</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/concurrent/thread/" class="nav-link">多线程</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/designpattern/create/" class="nav-link">创建型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">结构型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/behavior.html" class="nav-link">行为型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">MVC设计模式</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分布式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese.html" class="nav-link">分布式缓存</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式消息队列</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式锁</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式搜索引擎</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">软件安装</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/soft/docker/" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/soft/gitlab/" class="nav-link">gitlab</a></li><li class="dropdown-item"><!----> <a href="/soft/nexus/" class="nav-link">nexus</a></li><li class="dropdown-item"><!----> <a href="/soft/mysql/" class="nav-link">mysql</a></li><li class="dropdown-item"><!----> <a href="/soft/zk-kafka/" class="nav-link router-link-exact-active router-link-active">kafka</a></li><li class="dropdown-item"><!----> <a href="/soft/rabbitmq/" class="nav-link">rabbitmq</a></li><li class="dropdown-item"><!----> <a href="/soft/elasitcsearch/" class="nav-link">elasitcsearch</a></li><li class="dropdown-item"><!----> <a href="/soft/registry/" class="nav-link">registry</a></li><li class="dropdown-item"><!----> <a href="/soft/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/soft/jenkins/" class="nav-link">jenkins</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/soft/zk-kafka/" class="active sidebar-link">实现目标</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/soft/zk-kafka/kafka.html" class="sidebar-link">Docker-安装kafka</a></li><li><a href="/soft/zk-kafka/zookeeper.html" class="sidebar-link">docker 安装zookeeper</a></li></ul> </div> <div class="page"> <div class="content"><h4 id="实现目标"><a href="#实现目标" aria-hidden="true" class="header-anchor">#</a> 实现目标</h4> <blockquote><p>kafka集群在docker网络中可用，和zookeeper处于同一网络
+宿主机可以访问zookeeper集群和kafka的broker list
+docker重启时集群自动重启
+集群的数据文件映射到宿主机器目录中
+使用yml文件和$ docker-compose up -d命令创建或重建集群</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ docker-compose up -d
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="zk集群的docker-compose-yml"><a href="#zk集群的docker-compose-yml" aria-hidden="true" class="header-anchor">#</a> zk集群的docker-compose.yml</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>version: '3.4'
+
+services:
+  zoo1:
+    image: zookeeper
+    restart: always
+    hostname: zoo1
+    container_name: zoo1
+    privileged: true
+    ports:
+      - 2181:2181
+      - 2888:2888
+      - 3888:3888
+    expose:
+      - 2181
+    volumes:
+      - &quot;./zoo1/data:/data&quot;
+      - &quot;./zoo1/datalog:/datalog&quot;
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+    networks:
+      - kafka
+
+  zoo2:
+    image: zookeeper
+    privileged: true
+    restart: always
+    hostname: zoo2
+    container_name: zoo2
+    ports:
+      - 2182:2181
+    expose:
+      - 2182
+      - 2888
+      - 3888
+    volumes:
+      - &quot;./zoo2/data:/data&quot;
+      - &quot;./zoo2/datalog:/datalog&quot;
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
+    networks:
+      - kafka
+    depends_on:
+      - zoo1
+
+  zoo3:
+    image: zookeeper
+    privileged: true
+    restart: always
+    hostname: zoo3
+    container_name: zoo3
+    ports:
+      - 2183:2181
+    expose:
+      - 2183
+      - 2888
+      - 3888
+    volumes:
+      - &quot;./zoo3/data:/data&quot;
+      - &quot;./zoo3/datalog:/datalog&quot;
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888
+    networks:
+      - kafka
+    depends_on:
+      - zoo1
+      - zoo2
+  kafka1:
+    image: wurstmeister/kafka
+    restart: always
+    hostname: kafka1
+    container_name: kafka1
+    ports:
+      - 9092:9092
+    links:
+      - zoo1
+      - zoo2
+      - zoo3
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka1
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+    volumes:
+      - ./kafka1/logs:/kafka
+    networks:
+      - kafka
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+
+  kafka2:
+    image: wurstmeister/kafka
+    restart: always
+    hostname: kafka2
+    container_name: kafka2
+    ports:
+      - 9093:9093
+    links:
+      - zoo1
+      - zoo2
+      - zoo3
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka2
+      KAFKA_ADVERTISED_PORT: 9093
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+    volumes:
+      - ./kafka2/logs:/kafka
+    networks:
+      - kafka
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+      - kafka1
+
+  kafka3:
+    image: wurstmeister/kafka
+    restart: always
+    hostname: kafka3
+    container_name: kafka3
+    ports:
+    - 9094:9094
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka3
+      KAFKA_ADVERTISED_PORT: 9094
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+    links:
+      - zoo1
+      - zoo2
+      - zoo3
+    volumes:
+      - ./kafka3/logs:/kafka
+    networks:
+      - kafka
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+      - kafka1
+      - kafka2
+      
+  kafka-manager:
+    image: hlebalbau/kafka-manager
+    restart: unless-stopped
+    ports:
+      - &quot;9000:9000&quot;
+    environment:
+      ZK_HOSTS: &quot;zoo1:2181&quot;
+      APPLICATION_SECRET: &quot;random-secret&quot;
+      KAFKA_MANAGER_AUTH_ENABLED: &quot;true&quot;
+      KAFKA_MANAGER_USERNAME: &quot;admin&quot;
+      KAFKA_MANAGER_PASSWORD: &quot;123456&quot;
+    container_name: kafka-manager  
+    command: -Dpidfile.path=/dev/null
+    networks:
+      - kafka
+networks:
+  kafka:
+    external:
+      name: kafka
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br></div></div><h4 id="kafka集群的docker-compose-yml"><a href="#kafka集群的docker-compose-yml" aria-hidden="true" class="header-anchor">#</a> kafka集群的docker-compose.yml</h4> <blockquote><p>kfkluster少拼了个c…</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>version: '2'
+
+services:
+  kafka1:
+    image: wurstmeister/kafka
+    restart: always
+    hostname: kafka1
+    container_name: kafka1
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka1
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+    volumes:
+      - ./kafka1/logs:/kafka
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    networks:
+      - kafka
+
+  kafka2:
+    image: wurstmeister/kafka
+    restart: always
+    hostname: kafka2
+    container_name: kafka2
+    ports:
+      - 9093:9093
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka2
+      KAFKA_ADVERTISED_PORT: 9093
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+    volumes:
+      - ./kafka2/logs:/kafka
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    networks:
+      - bridge
+
+  kafka3:
+    image: wurstmeister/kafka
+    restart: always
+    hostname: kafka3
+    container_name: kafka3
+    ports:
+    - 9094:9094
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka3
+      KAFKA_ADVERTISED_PORT: 9094
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+    volumes:
+      - ./kafka3/logs:/kafka
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    networks:
+      - bridge
+      
+  kafka-manager:
+    image: hlebalbau/kafka-manager
+    restart: unless-stopped
+    ports:
+      - &quot;9000:9000&quot;
+    environment:
+      ZK_HOSTS: &quot;zoo1:2181&quot;
+      APPLICATION_SECRET: &quot;random-secret&quot;
+      KAFKA_MANAGER_AUTH_ENABLED: &quot;true&quot;
+      KAFKA_MANAGER_USERNAME: &quot;admin&quot;
+      KAFKA_MANAGER_PASSWORD: &quot;123456&quot;
+    depends_on:
+      - zoo1
+    container_name: kafka-manager  
+    command: -Dpidfile.path=/dev/null
+    networks:
+      - bridge
+      
+networks:
+  kafka:
+    external:
+      name: bridge
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br></div></div><h3 id="结果查看和测试"><a href="#结果查看和测试" aria-hidden="true" class="header-anchor">#</a> 结果查看和测试</h3> <h4 id="宿主机命令行创建topic"><a href="#宿主机命令行创建topic" aria-hidden="true" class="header-anchor">#</a> 宿主机命令行创建topic</h4> <h3 id="结果查看和测试-2"><a href="#结果查看和测试-2" aria-hidden="true" class="header-anchor">#</a> 结果查看和测试</h3> <h4 id="宿主机命令行创建topic-2"><a href="#宿主机命令行创建topic-2" aria-hidden="true" class="header-anchor">#</a> 宿主机命令行创建topic</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ pwd
+/Users/shaozhipeng/Development/kafka_2.11-2.0.0/bin
+$ ./kafka-topics.sh --create --zookeeper localhost:2184,localhost:2185,localhost:2186 --replication-factor 1 --partitions 1 --topic test1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="kafka-tool查看"><a href="#kafka-tool查看" aria-hidden="true" class="header-anchor">#</a> Kafka Tool查看</h4> <p><a href="http://images.icocoro.me/images/new/2018121701.png" target="_blank" rel="noopener noreferrer"><img src="http://images.icocoro.me/images/new/2018121701.png" alt="image"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h4 id="docker-ps查看正在运行的容器"><a href="#docker-ps查看正在运行的容器" aria-hidden="true" class="header-anchor">#</a> docker ps查看正在运行的容器</h4> <p><a href="http://images.icocoro.me/images/new/2018121702.png" target="_blank" rel="noopener noreferrer"><img src="http://images.icocoro.me/images/new/2018121702.png" alt="image"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h4 id="查看宿主机ip地址，并设置host"><a href="#查看宿主机ip地址，并设置host" aria-hidden="true" class="header-anchor">#</a> 查看宿主机IP地址，并设置Host</h4> <blockquote><p>这样宿主机就可以访问kafka集群了</p></blockquote> <p><a href="http://images.icocoro.me/images/new/2018121703.png" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>FROM centos:6.6
+ 
+ENV KAFKA_VERSION &quot;1.0.0&quot;
+ 
+RUN mkdir /etc/yum.repos.d/backup &amp;&amp;\
+	mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/backup/ &amp;&amp;\
+	curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo &amp;&amp;\
+	sed -i &quot;s/mirrors.aliyun.com/mirrors.aliyun.com/g&quot; /etc/yum.repos.d/CentOS-Base.repo
+ 
+RUN yum -y install nc vim lsof wget tar bzip2 unzip vim-enhanced passwd sudo yum-utils hostname net-tools rsync man git make automake cmake patch logrotate python-devel libpng-devel libjpeg-devel pwgen python-pip
+ 
+RUN mkdir /opt/java &amp;&amp;\
+	wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.tar.gz&quot; -P /opt/java
+ 
+RUN mkdir /opt/kafka &amp;&amp;\
+	wget http://apache.fayea.com/kafka/$KAFKA_VERSION/kafka_2.11-$KAFKA_VERSION.tgz -P /opt/kafka
+ 
+RUN tar zxvf /opt/java/jdk-8u141-linux-x64.tar.gz -C /opt/java &amp;&amp;\
+	JAVA_HOME=/opt/java/jdk1.8.0_141 &amp;&amp;\
+	sed -i &quot;/^PATH/i export JAVA_HOME=$JAVA_HOME&quot; /root/.bash_profile &amp;&amp;\
+	sed -i &quot;s%^PATH.*$%&amp;:$JAVA_HOME/bin%g&quot; /root/.bash_profile &amp;&amp;\
+	source /root/.bash_profile
+ 
+RUN tar zxvf /opt/kafka/kafka*.tgz -C /opt/kafka &amp;&amp;\
+	sed -i 's/num.partitions.*$/num.partitions=3/g' /opt/kafka/kafka_2.11-$KAFKA_VERSION/config/server.properties
+ 
+RUN echo &quot;source /root/.bash_profile&quot; &gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;cd /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	#echo &quot;sed -i 's%zookeeper.connect=.*$%zookeeper.connect=zookeeper:2181%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;[ ! -z $&quot;&quot;ZOOKEEPER_CONNECT&quot;&quot; ] &amp;&amp; sed -i 's%.*zookeeper.connect=.*$%zookeeper.connect='$&quot;&quot;ZOOKEEPER_CONNECT'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;[ ! -z $&quot;&quot;BROKER_ID&quot;&quot; ] &amp;&amp; sed -i 's%broker.id=.*$%broker.id='$&quot;&quot;BROKER_ID'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;[ ! -z $&quot;&quot;BROKER_PORT&quot;&quot; ] &amp;&amp; sed -i 's%port=.*$%port='$&quot;&quot;BROKER_PORT'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;sed -i 's%#advertised.host.name=.*$%advertised.host.name='$&quot;&quot;(hostname -i)'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;[ ! -z $&quot;&quot;ADVERTISED_HOST_NAME&quot;&quot; ] &amp;&amp; sed -i 's%.*advertised.host.name=.*$%advertised.host.name='$&quot;&quot;ADVERTISED_HOST_NAME'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;sed -i 's%#host.name=.*$%host.name='$&quot;&quot;(hostname -i)'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;[ ! -z $&quot;&quot;HOST_NAME&quot;&quot; ] &amp;&amp; sed -i 's%.*host.name=.*$%host.name='$&quot;&quot;HOST_NAME'&quot;&quot;%g'  /opt/kafka/kafka_2.11-&quot;$KAFKA_VERSION&quot;/config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	echo &quot;delete.topic.enable=true&quot; &gt;&gt; /opt/kafka/kafka_2.11-$KAFKA_VERSION/config/server.properties &amp;&amp;\
+        echo &quot;group.initial.rebalance.delay.ms=0&quot; &gt;&gt; /opt/kafka/kafka_2.11-$KAFKA_VERSION/config/server.properties &amp;&amp;\
+	echo &quot;bin/kafka-server-start.sh config/server.properties&quot; &gt;&gt; /opt/kafka/start.sh &amp;&amp;\
+	chmod a+x /opt/kafka/start.sh
+ 
+RUN yum install -y nc
+ 
+EXPOSE 9092
+ 
+WORKDIR /opt/kafka/kafka_2.11-$KAFKA_VERSION
+ 
+ENTRYPOINT [&quot;sh&quot;, &quot;/opt/kafka/start.sh&quot;]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-text"><code>version: '2'
+services:
+  zookeeper0:
+    image: zookeeper
+    container_name: zookeeper0
+    hostname: zookeeper0
+    ports:
+      - &quot;2181:2181&quot;
+      - &quot;2888:2888&quot;
+      - &quot;3888:3888&quot;
+    expose:
+      - 2181
+      - 2888
+      - 3888
+    environment:
+      ZOOKEEPER_PORT: 2181
+      ZOOKEEPER_ID: 0
+      ZOOKEEPER_SERVERS: server.0=zookeeper0:2888:3888 server.1=zookeeper1:28881:38881 server.2=zookeeper2:28882:38882
+  zookeeper1:
+    image: zookeeper
+    container_name: zookeeper1
+    hostname: zookeeper1
+    ports:
+      - &quot;2182:2182&quot;
+      - &quot;28881:28881&quot;
+      - &quot;38881:38881&quot;
+    expose:
+      - 2182
+      - 2888
+      - 3888
+    environment:
+      ZOOKEEPER_PORT: 2182
+      ZOOKEEPER_ID: 1
+      ZOOKEEPER_SERVERS: server.0=zookeeper0:2888:3888 server.1=zookeeper1:28881:38881 server.2=zookeeper2:28882:38882
+  zookeeper2:
+    image: zookeeper
+    container_name: zookeeper2
+    hostname: zookeeper2
+    ports:
+      - &quot;2183:2183&quot;
+      - &quot;28882:28882&quot;
+      - &quot;38882:38882&quot;
+    expose:
+      - 2183
+      - 2888
+      - 3888
+    environment:
+      ZOOKEEPER_PORT: 2183
+      ZOOKEEPER_ID: 2
+      ZOOKEEPER_SERVERS: server.0=zookeeper0:2888:3888 server.1=zookeeper1:28881:38881 server.2=zookeeper2:28882:38882
+  kafka0:
+    image: wurstmeister/kafka
+    container_name: kafka0
+    hostname: kafka0
+    ports:
+      - &quot;9092:9092&quot;
+    environment:
+      ZOOKEEPER_CONNECT: zookeeper0:2181,zookeeper1:2182,zookeeper2:2183
+      BROKER_ID: 0
+      BROKER_PORT: 9092
+      ADVERTISED_HOST_NAME: kafka0
+      HOST_NAME: kafka0
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+        - zookeeper0
+        - zookeeper1
+        - zookeeper2
+    expose:
+      - 9092
+  kafka1:
+    image: wurstmeister/kafka
+    container_name: kafka1
+    hostname: kafka1
+    ports:
+      - &quot;9093:9093&quot;
+    environment:
+      ZOOKEEPER_CONNECT: zookeeper0:2181,zookeeper1:2182,zookeeper2:2183
+      BROKER_ID: 1
+      BROKER_PORT: 9093
+      ADVERTISED_HOST_NAME: kafka1
+      HOST_NAME: kafka1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+        - zookeeper0
+        - zookeeper1
+        - zookeeper2
+    expose:
+      - 9093
+  kafka2:
+    image: wurstmeister/kafka
+    container_name: kafka2
+    hostname: kafka2
+    ports:
+      - &quot;9094:9094&quot;
+    environment:
+      ZOOKEEPER_CONNECT: zookeeper0:2181,zookeeper1:2182,zookeeper2:2183
+      BROKER_ID: 2
+      BROKER_PORT: 9094
+      ADVERTISED_HOST_NAME: kafka2
+      HOST_NAME: kafka2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+        - zookeeper0
+        - zookeeper1
+        - zookeeper2
+    expose:
+      - 9094
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/soft/zk-kafka/kafka.html">
+          Docker-安装kafka
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.f3fa66b2.js" defer></script><script src="/assets/js/24.607cbd64.js" defer></script>
+  </body>
+</html>

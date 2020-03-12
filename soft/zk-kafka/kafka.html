@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker-安装kafka | BAT-从想去到放弃</title>
+    <meta name="description" content="记录学习的点点滴滴，共同进步">
+    <link rel="icon" href="/my.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.1150044b.css" as="style"><link rel="preload" href="/assets/js/app.f3fa66b2.js" as="script"><link rel="preload" href="/assets/js/25.f54cde96.js" as="script"><link rel="prefetch" href="/assets/js/10.519c0073.js"><link rel="prefetch" href="/assets/js/11.ff8d7b4e.js"><link rel="prefetch" href="/assets/js/12.a2a25296.js"><link rel="prefetch" href="/assets/js/13.3b92aee0.js"><link rel="prefetch" href="/assets/js/14.9c570859.js"><link rel="prefetch" href="/assets/js/15.33c10f34.js"><link rel="prefetch" href="/assets/js/16.91fc2b00.js"><link rel="prefetch" href="/assets/js/17.d253833c.js"><link rel="prefetch" href="/assets/js/18.15c12575.js"><link rel="prefetch" href="/assets/js/19.76367b36.js"><link rel="prefetch" href="/assets/js/2.64267ebb.js"><link rel="prefetch" href="/assets/js/20.e02d1444.js"><link rel="prefetch" href="/assets/js/21.4808c524.js"><link rel="prefetch" href="/assets/js/22.ff9655a5.js"><link rel="prefetch" href="/assets/js/23.c86a820c.js"><link rel="prefetch" href="/assets/js/24.607cbd64.js"><link rel="prefetch" href="/assets/js/26.dcd2b7a7.js"><link rel="prefetch" href="/assets/js/27.d4a6d223.js"><link rel="prefetch" href="/assets/js/3.45bdd644.js"><link rel="prefetch" href="/assets/js/4.9dcf3f7d.js"><link rel="prefetch" href="/assets/js/5.12877c06.js"><link rel="prefetch" href="/assets/js/6.31f57a6c.js"><link rel="prefetch" href="/assets/js/7.adb3f0e1.js"><link rel="prefetch" href="/assets/js/8.da6b6ccb.js"><link rel="prefetch" href="/assets/js/9.ee80b304.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1150044b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BAT-从想去到放弃</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/basic/collections/" class="nav-link">集合</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java并发编程</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/concurrent/thread/" class="nav-link">多线程</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/designpattern/create/" class="nav-link">创建型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">结构型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/behavior.html" class="nav-link">行为型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">MVC设计模式</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分布式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese.html" class="nav-link">分布式缓存</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式消息队列</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式锁</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式搜索引擎</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">软件安装</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/soft/docker/" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/soft/gitlab/" class="nav-link">gitlab</a></li><li class="dropdown-item"><!----> <a href="/soft/nexus/" class="nav-link">nexus</a></li><li class="dropdown-item"><!----> <a href="/soft/mysql/" class="nav-link">mysql</a></li><li class="dropdown-item"><!----> <a href="/soft/zk-kafka/" class="nav-link router-link-active">kafka</a></li><li class="dropdown-item"><!----> <a href="/soft/rabbitmq/" class="nav-link">rabbitmq</a></li><li class="dropdown-item"><!----> <a href="/soft/elasitcsearch/" class="nav-link">elasitcsearch</a></li><li class="dropdown-item"><!----> <a href="/soft/registry/" class="nav-link">registry</a></li><li class="dropdown-item"><!----> <a href="/soft/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/soft/jenkins/" class="nav-link">jenkins</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/basic/collections/" class="nav-link">集合</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">java并发编程</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/concurrent/thread/" class="nav-link">多线程</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/designpattern/create/" class="nav-link">创建型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">结构型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/behavior.html" class="nav-link">行为型</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">MVC设计模式</a></li><li class="dropdown-item"><!----> <a href="/designpattern/structure.html" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分布式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese.html" class="nav-link">分布式缓存</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式消息队列</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式锁</a></li><li class="dropdown-item"><!----> <a href="/language/japanese.html" class="nav-link">分布式搜索引擎</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">软件安装</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/soft/docker/" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/soft/gitlab/" class="nav-link">gitlab</a></li><li class="dropdown-item"><!----> <a href="/soft/nexus/" class="nav-link">nexus</a></li><li class="dropdown-item"><!----> <a href="/soft/mysql/" class="nav-link">mysql</a></li><li class="dropdown-item"><!----> <a href="/soft/zk-kafka/" class="nav-link router-link-active">kafka</a></li><li class="dropdown-item"><!----> <a href="/soft/rabbitmq/" class="nav-link">rabbitmq</a></li><li class="dropdown-item"><!----> <a href="/soft/elasitcsearch/" class="nav-link">elasitcsearch</a></li><li class="dropdown-item"><!----> <a href="/soft/registry/" class="nav-link">registry</a></li><li class="dropdown-item"><!----> <a href="/soft/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/soft/jenkins/" class="nav-link">jenkins</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/soft/zk-kafka/" class="sidebar-link">实现目标</a></li><li><a href="/soft/zk-kafka/kafka.html" class="active sidebar-link">Docker-安装kafka</a></li><li><a href="/soft/zk-kafka/zookeeper.html" class="sidebar-link">docker 安装zookeeper</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="docker-安装kafka"><a href="#docker-安装kafka" aria-hidden="true" class="header-anchor">#</a> Docker-安装kafka</h1> <p>https://blog.csdn.net/sinat_31908303/article/details/80447383</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'2'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">zookeeper</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> wurstmeister/zookeeper   <span class="token comment">## 镜像</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> &quot;2181<span class="token punctuation">:</span>2181&quot;                 <span class="token comment">## 对外暴露的端口号</span>
+  <span class="token key atrule">kafka</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> wurstmeister/kafka       <span class="token comment">## 镜像</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
+        <span class="token punctuation">-</span> /etc/localtime<span class="token punctuation">:</span>/etc/localtime <span class="token comment">## 挂载位置（kafka镜像和宿主机器之间时间保持一直）</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;9092:9092&quot;</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">KAFKA_ADVERTISED_HOST_NAME</span><span class="token punctuation">:</span> 192.168.150.130   <span class="token comment">## 修改:宿主机IP</span>
+      <span class="token key atrule">KAFKA_ZOOKEEPER_CONNECT</span><span class="token punctuation">:</span> zookeeper<span class="token punctuation">:</span><span class="token number">2181       </span><span class="token comment">## 卡夫卡运行是基于zookeeper的</span>
+  <span class="token key atrule">kafka-manager</span><span class="token punctuation">:</span>  
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> sheepkiller/kafka<span class="token punctuation">-</span>manager                <span class="token comment">## 镜像：开源的web管理kafka集群的界面</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ZK_HOSTS</span><span class="token punctuation">:</span> 192.168.150.130                   <span class="token comment">## 修改:宿主机IP</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>  
+      <span class="token punctuation">-</span> &quot;9000<span class="token punctuation">:</span>9000&quot;                                 <span class="token comment">## 暴露端口 </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><div class="language-yml line-numbers-mode"><pre class="language-text"><code>version: '2'
+
+services:
+  zoo1:
+    image: wurstmeister/zookeeper
+    restart: unless-stopped
+    hostname: zoo1
+    ports:
+      - &quot;12181:2181&quot;
+    container_name: zookeeper
+
+  # kafka version: 1.1.0
+  # scala version: 2.12
+  kafka1:
+    image: wurstmeister/kafka
+    ports:
+      - &quot;9092:9092&quot;
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: xxx # 这里为宿主机host name
+      KAFKA_ZOOKEEPER_CONNECT: &quot;zoo1:2181&quot;
+      KAFKA_BROKER_ID: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    depends_on:
+      - zoo1
+    container_name: kafka
+  kafka-manager:
+    image: hlebalbau/kafka-manager
+    restart: unless-stopped
+    ports:
+      - &quot;10085:9000&quot;
+    environment:
+      ZK_HOSTS: &quot;zoo1:2181&quot;
+      APPLICATION_SECRET: &quot;random-secret&quot;
+      KAFKA_MANAGER_AUTH_ENABLED: &quot;true&quot;
+      KAFKA_MANAGER_USERNAME: &quot;admin&quot;
+      KAFKA_MANAGER_PASSWORD: &quot;TL2oo8tl2oo8&quot;
+    depends_on:
+      - zoo1
+    container_name: kafka-manager  
+    command: -Dpidfile.path=/dev/null
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/soft/zk-kafka/" class="prev router-link-active">
+          实现目标
+        </a></span> <span class="next"><a href="/soft/zk-kafka/zookeeper.html">
+          docker 安装zookeeper
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.f3fa66b2.js" defer></script><script src="/assets/js/25.f54cde96.js" defer></script>
+  </body>
+</html>
